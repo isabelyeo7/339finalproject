@@ -428,3 +428,40 @@ section h2 {
     color: white;
     text-align: center;
 }
+
+@media (prefers-reduced-motion: reduce) {
+    /* disable transitions */
+    * {
+        transition: none; /* Removes all transitions */
+        animation: none; /* Removes all animations */
+    }
+
+    /* for image hover effects */
+    .key-elements:hover {
+        box-shadow: 0 0 0 400px inset, 0 0 5px grey;
+    }
+
+    .key-elements:hover::after {
+        opacity: 1; /* Keep caption visible instead of fading */
+    }
+
+    /* for slideshow navigation */
+    .prev, .next {
+        transition: none;
+    }
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.5); /* No hover change */
+    }
+
+    /* for outfit gallery hover effect */
+    .outfit-row img:hover {
+        transform: none; /* Disable zoom effect */
+    }
+
+    /* for designer gallery hover effect */
+    .designer-gallery img:hover {
+        transform: none; /* Disable zoom effect */
+    }
+}
+
