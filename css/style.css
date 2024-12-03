@@ -1,0 +1,430 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Euphoria+Script&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* index.html color variables */
+:root {
+    --primary-color: #c51f9e;
+    --secondary-color: #7c2073;
+    --tertiary-color: #f1b9e9;
+    --fourth-color: #f1eff5;
+    --bg-color: black;
+    --text-color: white;
+    --text-color2: black;
+    --link-color: rgb(135, 39, 90); 
+}
+/* y2k webpage variables */
+
+/* bloke core webpage variables */
+
+/* maximalist webpage variables */
+
+
+/* root and basic styling */
+body {
+    font-family: 'Andika', sans-serif; 
+    background-color: black;
+    background-image: url(../images/bg1.jpg);
+    height: 100vh; /* Full viewport height */
+    width: 100%;   /* Full width */
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    color: var(--text-color);
+}
+
+h1, h2, h3 {
+    font-family: 'Euphoria Script', cursive;
+    text-align: center;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 1em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+h2 , h3 {
+    font-size: 2.5em;
+}
+
+.main-img {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 1em auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* min-width query for desktop view --> main view */
+
+/* styling for nav bar */
+/* Navigation Bar Styling */
+header {
+    background: black;
+    padding: 1em 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex; /* Makes the list items display in a horizontal row */
+    justify-content: center; /* Centers the menu items */
+    gap: 2em; /* Adds spacing between menu items */
+    margin: 0;
+    padding: 0;
+    font-family: 'Andika', sans-serif;
+}
+
+header nav ul li {
+    font-size: 1.2em;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background: #ffffff;
+    color: #3f2b96;
+}
+
+
+/* styling for images with captions beside it */
+
+/* pictures */
+
+.key-elements {
+    width: 60%;
+    height: 700px;
+    /* center content using flex box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat; /* Prevent image tiling */
+    background-position: center;
+    position: relative;
+    /* overlay */
+    box-shadow: 0 0 0 400px inset, 0 0 5px grey;
+    /* hover out transition */
+    transition: box-shadow 1s;
+    float: left;
+    margin: 0 auto;
+  }
+  
+  .key-elements::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    /* white-space: pre; */
+    font-family: 'Euphoria Script', cursive;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    /* center content using flex box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    /* hover out transition */
+    transition: opacity 1s .5s;
+  }
+  
+  
+  /* reveal picture on hover */
+  
+  .key-elements:hover {
+    box-shadow: 0 0 0 5px inset, 0 0 5px grey, 0 0 10px grey inset;
+    transition: box-shadow 1s;
+  }
+  
+  
+  /* hide caption on hover */
+  
+  .key-elements:hover::after {
+    opacity: 0;
+    transition: opacity .5s;
+  }
+  
+  #lowrise {
+    background-image: url(../images/y2k2.jpg);
+    color: rgba(68, 62, 52, 0.935);
+  }
+  
+  #lowrise::after {
+    content: 'Lowrise Jeans';
+  }
+  
+  #print-mixing {
+    background-image: url(../images/y2k14.jpg);
+    color: rgba(68, 62, 52, 0.935);
+  }
+  
+  #print-mixing::after {
+    content: 'Print Mixing'
+  }
+  
+  #contrasting-textures {
+    background-image: url(../images/y2k5.jpg);
+    color: rgba(68, 62, 52, 0.935);
+  }
+  
+  #contrasting-textures::after {
+    content: 'Contrasting Textures'
+  }
+  
+  /* bloke core webpage key elements */
+  #jersey {
+    background-image: url(../images/bloke12.jpg);
+    color: rgba(68, 62, 52, 0.935);
+  }
+  
+  #jersey::after {
+    content: 'Vintage Soccer Jerseys';
+  }
+
+  #denim {
+    background-image: url(../images/bloke11.jpg);
+    color: rgba(68, 62, 52, 0.935);
+  }
+  
+  #denim::after {
+    content: 'Vintage, baggy denim';
+  }
+
+  #soccer-shoes {
+    background-image: url(../images/bloke5.jpg);
+    color: rgba(68, 62, 52, 0.935);
+  }
+  
+  #soccer-shoes::after {
+    content: 'Flat, indoor cleat inspired shoes';
+  }
+
+  /* maximalist webpage key elements */
+  #layering {
+    background-image: url(../images/max2.jpg);
+    color: rgba(68, 62, 52, 0.935);
+  }
+  
+  #layering::after {
+    content: 'Intense Layering';
+  }
+
+  #jewelry {
+    background-image: url(../images/max4.jpg);
+    color: rgba(68, 62, 52, 0.935);
+  }
+  
+  #jewelry::after {
+    content: 'Excessive, stacked jewelry';
+  }
+
+  #vibrant {
+    background-image: url(../images/max18.jpg);
+    color: rgba(68, 62, 52, 0.935);
+  }
+  
+  #vibrant::after {
+    content: 'Vibrant Colors';
+  }
+
+
+.image-caption-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+
+/* For smaller screens */
+@media (min-width: 601px) {
+    .image-caption-pair {
+        flex-direction: row;
+    }
+
+    .image-caption-pair img {
+        width: 40%;
+        border-right: 1px solid #ddd;
+        border-bottom: none;
+    }
+}
+
+/* Default for mobile-first (smaller screens) */
+.image-caption-pair {
+    flex-direction: column;
+}
+/* styling for section part of the aesthetic webpages */
+section {
+    margin-bottom: 2em;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    color: #ff6ec7;
+    margin-bottom: 0.5em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+/* styling for click through slideshow/image gallery for  */
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: auto;
+}
+
+.slides {
+    display: none;
+    position: relative;
+    text-align: center;
+}
+
+.slides img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); */
+}
+
+.slides .caption {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 0 0 10px 10px;
+    margin-top: 10px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    /* margin-top: -22px; */
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 10;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* styling for outfit gallery */
+#my-outfits {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.outfit-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.outfit-row {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.outfit-row img {
+    width: 55%;
+    max-width: 300px; /* Optional: limit the image size */
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    margin: 20px;
+}
+
+.outfit-row img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* styling for the designer section */
+/* Inspirational Designers Section */
+#inspirational-designers {
+    margin: 2em 0;
+    text-align: center;
+}
+
+.designer-section {
+    margin-bottom: 2em;
+}
+
+.designer-section h3 {
+    margin-bottom: 0.5em;
+}
+
+.designer-gallery figure {
+    margin: 1em auto;
+    max-width: 600px; /* Optional: limit the width of the image and caption */
+}
+
+.designer-gallery img {
+    width: 100%; /* Ensures the image scales to fit the figure */
+    height: auto;
+    border: 5px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.designer-gallery img:hover {
+    transform: scale(1.03); /* Slight zoom effect on hover */
+}
+
+.designer-gallery figcaption {
+    margin-top: 1em;
+    margin-bottom: 3em;
+    font-size: 0.9em;
+    color: white;
+    text-align: center;
+}
